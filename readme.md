@@ -21,7 +21,7 @@ In addition, this project will include:
 -A production README
 -Game instructions and control explaintion
 
-*********Wireframe.png as seperate file****************
+![Getting Started](wireframe.png)
 
 Nav links include links to this project's Github repo and acknowledgements to any references or assests used.
 
