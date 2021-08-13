@@ -7,15 +7,16 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/board.js":
 /*!**********************!*\
   !*** ./src/board.js ***!
   \**********************/
-/***/ (function(module) {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Board = function Board(canvas) {\n  _classCallCheck(this, Board);\n\n  // this.buffer  = document.createElement(\"canvas\").getContext(\"2d\"),\n  // this.context = canvas.getContext(\"2d\");\n  // context.fillStyle = \"blue\";\n  // ctx.fillRect(0, 0, canvas.width, canvas.height);\n  // debugger\n  var ctx = canvas.getContext(\"2d\");\n  canvas.height = 600;\n  canvas.width = 600;\n  ctx.fillStyle = \"blue\";\n  ctx.fillRect(0, 0, canvas.width, canvas.height);\n};\n\n;\nmodule.exports = Board;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9qc19wcm9qLy4vc3JjL2JvYXJkLmpzPzIzZGIiXSwibmFtZXMiOlsiQm9hcmQiLCJjYW52YXMiLCJjdHgiLCJnZXRDb250ZXh0IiwiaGVpZ2h0Iiwid2lkdGgiLCJmaWxsU3R5bGUiLCJmaWxsUmVjdCIsIm1vZHVsZSIsImV4cG9ydHMiXSwibWFwcGluZ3MiOiI7O0lBRU1BLEssR0FDRixlQUFZQyxNQUFaLEVBQW9CO0FBQUE7O0FBQ2hCO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQSxNQUFJQyxHQUFHLEdBQUdELE1BQU0sQ0FBQ0UsVUFBUCxDQUFrQixJQUFsQixDQUFWO0FBQ0FGLEVBQUFBLE1BQU0sQ0FBQ0csTUFBUCxHQUFnQixHQUFoQjtBQUNBSCxFQUFBQSxNQUFNLENBQUNJLEtBQVAsR0FBZSxHQUFmO0FBQ0FILEVBQUFBLEdBQUcsQ0FBQ0ksU0FBSixHQUFnQixNQUFoQjtBQUNBSixFQUFBQSxHQUFHLENBQUNLLFFBQUosQ0FBYSxDQUFiLEVBQWdCLENBQWhCLEVBQW1CTixNQUFNLENBQUNJLEtBQTFCLEVBQWlDSixNQUFNLENBQUNHLE1BQXhDO0FBQ0gsQzs7QUFDSjtBQUVESSxNQUFNLENBQUNDLE9BQVAsR0FBaUJULEtBQWpCIiwic291cmNlc0NvbnRlbnQiOlsiXG5cbmNsYXNzIEJvYXJkIHtcbiAgICBjb25zdHJ1Y3RvcihjYW52YXMpIHtcbiAgICAgICAgLy8gdGhpcy5idWZmZXIgID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcImNhbnZhc1wiKS5nZXRDb250ZXh0KFwiMmRcIiksXG4gICAgICAgIC8vIHRoaXMuY29udGV4dCA9IGNhbnZhcy5nZXRDb250ZXh0KFwiMmRcIik7XG4gICAgICAgIC8vIGNvbnRleHQuZmlsbFN0eWxlID0gXCJibHVlXCI7XG4gICAgICAgIC8vIGN0eC5maWxsUmVjdCgwLCAwLCBjYW52YXMud2lkdGgsIGNhbnZhcy5oZWlnaHQpO1xuICAgICAgIFxuICAgICAgICAvLyBkZWJ1Z2dlclxuICAgICAgICB2YXIgY3R4ID0gY2FudmFzLmdldENvbnRleHQoXCIyZFwiKTtcbiAgICAgICAgY2FudmFzLmhlaWdodCA9IDYwMDtcbiAgICAgICAgY2FudmFzLndpZHRoID0gNjAwO1xuICAgICAgICBjdHguZmlsbFN0eWxlID0gXCJibHVlXCI7XG4gICAgICAgIGN0eC5maWxsUmVjdCgwLCAwLCBjYW52YXMud2lkdGgsIGNhbnZhcy5oZWlnaHQpO1xuICAgIH07XG59O1xuXG5tb2R1bGUuZXhwb3J0cyA9IEJvYXJkO1xuXG4iXSwiZmlsZSI6Ii4vc3JjL2JvYXJkLmpzLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/board.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": function() { return /* binding */ Board; }\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Board = function Board(canvas) {\n  _classCallCheck(this, Board);\n\n  // this.buffer  = document.createElement(\"canvas\").getContext(\"2d\"),\n  // this.context = canvas.getContext(\"2d\");\n  // context.fillStyle = \"blue\";\n  // ctx.fillRect(0, 0, canvas.width, canvas.height);\n  var ctx = canvas.getContext(\"2d\");\n  canvas.height = 600;\n  canvas.width = 600;\n  ctx.fillStyle = \"blue\";\n  ctx.fillRect(0, 0, canvas.width, canvas.height);\n};\n\n\n;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvYm9hcmQuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7O0lBRXFCQSxRQUNqQixlQUFZQyxNQUFaLEVBQW9CO0FBQUE7O0FBQ2hCO0FBQ0E7QUFDQTtBQUNBO0FBRUEsTUFBSUMsR0FBRyxHQUFHRCxNQUFNLENBQUNFLFVBQVAsQ0FBa0IsSUFBbEIsQ0FBVjtBQUNBRixFQUFBQSxNQUFNLENBQUNHLE1BQVAsR0FBZ0IsR0FBaEI7QUFDQUgsRUFBQUEsTUFBTSxDQUFDSSxLQUFQLEdBQWUsR0FBZjtBQUNBSCxFQUFBQSxHQUFHLENBQUNJLFNBQUosR0FBZ0IsTUFBaEI7QUFDQUosRUFBQUEsR0FBRyxDQUFDSyxRQUFKLENBQWEsQ0FBYixFQUFnQixDQUFoQixFQUFtQk4sTUFBTSxDQUFDSSxLQUExQixFQUFpQ0osTUFBTSxDQUFDRyxNQUF4QztBQUNIOzs7QUFDSiIsInNvdXJjZXMiOlsid2VicGFjazovL2pzX3Byb2ovLi9zcmMvYm9hcmQuanM/MjNkYiJdLCJzb3VyY2VzQ29udGVudCI6WyJcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgQm9hcmQge1xuICAgIGNvbnN0cnVjdG9yKGNhbnZhcykge1xuICAgICAgICAvLyB0aGlzLmJ1ZmZlciAgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwiY2FudmFzXCIpLmdldENvbnRleHQoXCIyZFwiKSxcbiAgICAgICAgLy8gdGhpcy5jb250ZXh0ID0gY2FudmFzLmdldENvbnRleHQoXCIyZFwiKTtcbiAgICAgICAgLy8gY29udGV4dC5maWxsU3R5bGUgPSBcImJsdWVcIjtcbiAgICAgICAgLy8gY3R4LmZpbGxSZWN0KDAsIDAsIGNhbnZhcy53aWR0aCwgY2FudmFzLmhlaWdodCk7XG4gICAgICAgXG4gICAgICAgIHZhciBjdHggPSBjYW52YXMuZ2V0Q29udGV4dChcIjJkXCIpO1xuICAgICAgICBjYW52YXMuaGVpZ2h0ID0gNjAwO1xuICAgICAgICBjYW52YXMud2lkdGggPSA2MDA7XG4gICAgICAgIGN0eC5maWxsU3R5bGUgPSBcImJsdWVcIjtcbiAgICAgICAgY3R4LmZpbGxSZWN0KDAsIDAsIGNhbnZhcy53aWR0aCwgY2FudmFzLmhlaWdodCk7XG4gICAgfTtcbn07XG5cblxuIl0sIm5hbWVzIjpbIkJvYXJkIiwiY2FudmFzIiwiY3R4IiwiZ2V0Q29udGV4dCIsImhlaWdodCIsIndpZHRoIiwiZmlsbFN0eWxlIiwiZmlsbFJlY3QiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/board.js\n");
 
 /***/ }),
 
@@ -23,9 +24,9 @@ eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceo
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("var Board = __webpack_require__(/*! ./board */ \"./src/board.js\");\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  var board = new Board(document.querySelector(\"canvas\"));\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJtYXBwaW5ncyI6IkFBQ0EsSUFBTUEsS0FBSyxHQUFHQyxtQkFBTyxDQUFDLCtCQUFELENBQXJCOztBQUVBQyxRQUFRLENBQUNDLGdCQUFULENBQTBCLGtCQUExQixFQUE2QyxZQUFNO0FBQ25ELE1BQU1DLEtBQUssR0FBRyxJQUFJSixLQUFKLENBQVVFLFFBQVEsQ0FBQ0csYUFBVCxDQUF1QixRQUF2QixDQUFWLENBQWQ7QUFDQyxDQUZEIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vanNfcHJvai8uL3NyYy9pbmRleC5qcz9iNjM1Il0sInNvdXJjZXNDb250ZW50IjpbIlxuY29uc3QgQm9hcmQgPSByZXF1aXJlKFwiLi9ib2FyZFwiKTtcblxuZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsKCkgPT4ge1xuY29uc3QgYm9hcmQgPSBuZXcgQm9hcmQoZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImNhbnZhc1wiKSk7XG59KSJdLCJuYW1lcyI6WyJCb2FyZCIsInJlcXVpcmUiLCJkb2N1bWVudCIsImFkZEV2ZW50TGlzdGVuZXIiLCJib2FyZCIsInF1ZXJ5U2VsZWN0b3IiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _board_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./board.js */ \"./src/board.js\");\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  var board = new _board_js__WEBPACK_IMPORTED_MODULE_0__.default(document.querySelector(\"canvas\"));\n  window.addEventListener(\"keydown\", keyPressed); //event listeners for key inputs\n\n  window.addEventListener(\"keyup\", keyPressed);\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJtYXBwaW5ncyI6Ijs7QUFDQTtBQUtBQyxRQUFRLENBQUNDLGdCQUFULENBQTBCLGtCQUExQixFQUE2QyxZQUFNO0FBQ25ELE1BQU1DLEtBQUssR0FBRyxJQUFJSCw4Q0FBSixDQUFVQyxRQUFRLENBQUNHLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBVixDQUFkO0FBQ0FDLEVBQUFBLE1BQU0sQ0FBQ0gsZ0JBQVAsQ0FBd0IsU0FBeEIsRUFBbUNJLFVBQW5DLEVBRm1ELENBRUg7O0FBQ2hERCxFQUFBQSxNQUFNLENBQUNILGdCQUFQLENBQXdCLE9BQXhCLEVBQW1DSSxVQUFuQztBQUNDLENBSkQiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9qc19wcm9qLy4vc3JjL2luZGV4LmpzP2I2MzUiXSwic291cmNlc0NvbnRlbnQiOlsiXG5pbXBvcnQgQm9hcmQgZnJvbSBcIi4vYm9hcmQuanNcIlxuXG5cblxuXG5kb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdET01Db250ZW50TG9hZGVkJywoKSA9PiB7XG5jb25zdCBib2FyZCA9IG5ldyBCb2FyZChkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiY2FudmFzXCIpKTtcbndpbmRvdy5hZGRFdmVudExpc3RlbmVyKFwia2V5ZG93blwiLCBrZXlQcmVzc2VkKTsgLy9ldmVudCBsaXN0ZW5lcnMgZm9yIGtleSBpbnB1dHNcbndpbmRvdy5hZGRFdmVudExpc3RlbmVyKFwia2V5dXBcIiwgICBrZXlQcmVzc2VkKTtcbn0pXG5cbiJdLCJuYW1lcyI6WyJCb2FyZCIsImRvY3VtZW50IiwiYWRkRXZlbnRMaXN0ZW5lciIsImJvYXJkIiwicXVlcnlTZWxlY3RvciIsIndpbmRvdyIsImtleVByZXNzZWQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ }),
 
@@ -35,7 +36,6 @@ eval("var Board = __webpack_require__(/*! ./board */ \"./src/board.js\");\n\ndoc
   \************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9qc19wcm9qLy4vc3JjL2luZGV4LnNjc3M/OTc0NSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.scss\n");
 
 /***/ })
@@ -67,6 +67,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	!function() {
 /******/ 		// define __esModule on exports
