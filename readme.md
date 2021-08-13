@@ -24,7 +24,7 @@ In addition, this project will include:
 -A production README
 -Game instructions and control explaintion
 
-<h1>**Wireframe**</h1>
+<h1>Wireframe</h1>
 
 ![Getting Started](wireframe.png)
 
@@ -36,14 +36,14 @@ The mute button will turn off/on the game sound
 
 The menu will allow the user to navigate through the levels
 
-<h1>*Technologies, Libraries, APIs**</h1>
+<h1>Technologies, Libraries, APIs</h1>
 
 
 Canvas API to render the game board
 Wepback to bundle and transpile the JS codes
 Potentially animation libraries if the time allows for it
 
-<h1>**Timeline**</h1>
+<h1>Timeline</h1>
 
 Friday Afternoon & Weekend: Setup the enviroment and hopefully get the canvas to display the game view.
 Look up references and tutorials to get an idea how the game should be laid out and how to implement certain
