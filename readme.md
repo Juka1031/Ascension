@@ -1,3 +1,6 @@
+
+<span style="color:red; font-size:2em" >**ABOUT**</span>
+
 This project will be a 2d platformer in which the user will attempt to make it from point A to point B of the board/level. The player will control a character that can move left or right via left arrow key and right arrow key respectively, and the player will have the ability to jump vertically via spacebar. Ideally the later levels will have further interactions depending on the level via an action key mapped to the key F (This is not set in stone yet). There will be various obstacles and/or puzzles that will impede the player from reaching the goal (point B), such as but not limited to, pitfalls, buttons, moveable blocks, and much more.
 
 The 5 major files will be seperated in 
@@ -21,6 +24,8 @@ In addition, this project will include:
 -A production README
 -Game instructions and control explaintion
 
+<span style="color:red; font-size:2em" >**Wireframe**</span>
+
 ![Getting Started](wireframe.png)
 
 Nav links include links to this project's Github repo and acknowledgements to any references or assests used.
@@ -31,14 +36,15 @@ The mute button will turn off/on the game sound
 
 The menu will allow the user to navigate through the levels
 
+<span style="color:red; font-size:2em" >**Technologies, Libraries, APIs**</span>
 
-Technologies, Libraries, APIs
 
 Canvas API to render the game board
 Wepback to bundle and transpile the JS codes
 Potentially animation libraries if the time allows for it
 
-Implementation Timeline
+<span style="color:red; font-size:2em" >**Timeline**</span>
+
 Friday Afternoon & Weekend: Setup the enviroment and hopefully get the canvas to display the game view.
 Look up references and tutorials to get an idea how the game should be laid out and how to implement certain
 things like collision and physics. Becoming more comfortable with handling how each file will intertwine with
