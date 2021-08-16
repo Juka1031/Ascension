@@ -17,7 +17,6 @@ export default class Player {
         
         if(!this.jumping){//while not jumping
         //allow the user to jump
-        
             this.jumping = true;
             this.velY -= 20;
            
@@ -38,5 +37,6 @@ export default class Player {
         this.posY += this.velY;
         
     }
+
 
 }

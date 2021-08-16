@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded',() => {
     var keyPressed = function(event){ //changed const to var since needed in other files and not defined scoped
         controller.keyPressed(event.type, event.code)
     }
+    
     var update = function() {
         // console.log(controller.left.active)
         if (controller.left.pressed)  {
@@ -16,10 +17,11 @@ document.addEventListener('DOMContentLoaded',() => {
         if (controller.right.pressed) { game.player.moveRight(); }
         // debugger
         if (controller.jump.pressed){ 
+        // console.log(game.player.posY)
             
             game.player.jump(); 
             game.player.jumping = true;
-            // console.log(game.player.posX)
+            
         }
         
         game.update();
