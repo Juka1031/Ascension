@@ -6,6 +6,7 @@ const config = {
     path.resolve(__dirname, 'src', 'index.js'),
     path.resolve(__dirname, 'src', 'index.scss'),
   ],
+  target: 'node',
   output: {
     path: path.join(__dirname, 'dist'), // bundled file in dist/
     filename: '[name].js',

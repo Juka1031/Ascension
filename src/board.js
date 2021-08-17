@@ -1,7 +1,5 @@
-
-
 export default class Board {
-    constructor(canvas) {
+    constructor(canvas,gameHeight, gameWidth) {
         
         this.board  = document.createElement("canvas").getContext("2d"); //create the game board that can be dynamically resized regardless the canvas dimension
         this.context = canvas.getContext("2d");
@@ -9,8 +7,8 @@ export default class Board {
         // ctx.fillRect(0, 0, canvas.width, canvas.height);
        
         var ctx = canvas.getContext("2d");
-        canvas.height = 500;
-        canvas.width = 500;
+        canvas.height = gameHeight; //
+        canvas.width = gameWidth; //
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     };
@@ -33,7 +31,7 @@ export default class Board {
     }
 
     drawMap(game, columns) {
-
+        // console.log(game.map)
         for (let index = game.map.length - 1; index > -1; -- index) {
             // console.log(this)
         let value = game.map[index];
@@ -60,5 +58,3 @@ export default class Board {
     
     };
 };
-
-

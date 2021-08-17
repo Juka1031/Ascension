@@ -35,9 +35,12 @@ document.addEventListener('DOMContentLoaded',() => {
         board.render();
         //
     }
-const board = new Board(document.querySelector("canvas"));
+    const game = new Game();
+// console.log(game.width)
+const board = new Board(document.querySelector("canvas"),game.height*3,game.width*3);
 const controller = new Input();
-const game = new Game();
+
+
 const engine = new Engine(40, update, render);
 
 board.board.canvas.height = game.height;

@@ -8,27 +8,20 @@ export default class Game {
         this.friction = .9;
         this.gravity = 2;
         this.player = new Player();
-        this.col = 10;
-        this.row = 10;
+        this.levelOne = new Level(1)
+        
+        this.col = this.levelOne.gameCol;
+        this.row = this.levelOne.gameRow;
+        // console.log(this.col)
+        // console.log(this.row)
         this.tileSize = 16;
         this.height = this.tileSize * this.row;     //controls the game size, the larger it is the larger the field
         this.width = this.tileSize * this.col;
-        // this.levelOne = new Level("src/images/castle-tileset.png",16,8)
-        this.levelOne = new Level("1")
+        
+        // this.levelOne = new Level("1")
         this.map = this.levelOne.map
 
-        this.collision_map = [
-        0,0,0,0,0,0,0,0,0,0,
-        5,1,0,0,0,0,0,0,0,0,
-        3,5,0,0,0,0,0,0,0,0,
-        2,2,1,1,1,1,1,0,0,0,
-        0,0,0,0,0,0,0,0,0,0,
-        0,0,0,0,0,0,0,0,0,9,
-        0,0,0,0,0,0,0,0,9,9,
-        0,0,0,0,0,0,0,9,9,9,
-        1,1,1,1,1,1,9,9,9,1,
-        2,1,1,1,1,1,1,1,1,1,
-        ];
+        this.collision_map = this.levelOne.collisionMap
     }
     
     borderCollision(player){ 
