@@ -41,7 +41,7 @@ const board = new Board(document.querySelector("canvas"),game.height*3,game.widt
 const controller = new Input();
 
 
-const engine = new Engine(40, update, render);
+const engine = new Engine(30, update, render);
 
 board.board.canvas.height = game.height;
 board.board.canvas.width = game.width;

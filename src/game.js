@@ -45,65 +45,49 @@ export default class Game {
 
 
     collideTile(player){ 
-        //need for all 4 corners of the character
-       
-        var top = player.posY;
-        var bot = (player.posY + player.height);
-        var left = player.posX;
-        var right = (player.posX+ player.width);
-        //case 1 topleft
 
-        const tilePosLeftTop = Math.floor(player.posY/this.tileSize) * this.col + Math.floor(player.posX/this.tileSize) //tilePos is its corresponding in map[]
-        this.collide(this.collision_map[tilePosLeftTop],player, Math.floor(player.posY/this.tileSize) *this.tileSize, Math.floor(player.posX/this.tileSize) *this.tileSize)
-        //case 2 bottom player.posX corner
+    //topleft
+    const topLeftCorner  = Math.floor(player.posY/this.tileSize) * this.col + Math.floor(player.posX/this.tileSize);
+    this.collide(this.collision_map[topLeftCorner], player, Math.floor(player.posX/this.tileSize) * this.tileSize, Math.floor(player.posY/this.tileSize) * this.tileSize, this.tileSize);
 
-        const tilePosRightTop = Math.floor(player.posY/this.tileSize) * this.col + Math.floor((player.posX+ player.width)/this.tileSize)
-        this.collide(this.collision_map[tilePosRightTop],player, Math.floor(player.posY/this.tileSize) *this.tileSize, Math.floor((player.posX+ player.width)/this.tileSize) *this.tileSize)
+    //topright
+    const topRightCorner  = Math.floor(player.posY/this.tileSize) * this.col + Math.floor((player.posX+player.width)/this.tileSize);
+    this.collide(this.collision_map[topRightCorner], player, Math.floor((player.posX+player.width)/this.tileSize) * this.tileSize, Math.floor(player.posY/this.tileSize) * this.tileSize, this.tileSize);
+    
+    //bottomleft
+    const bottomLeftCorner = Math.floor((player.posY + player.height)/this.tileSize) * this.col + Math.floor(player.posX/this.tileSize);
+    this.collide(this.collision_map[bottomLeftCorner], player, Math.floor(player.posX/this.tileSize) * this.tileSize, Math.floor((player.posY + player.height)/this.tileSize) * this.tileSize, this.tileSize);
 
-        const tilePosLeftBottom = Math.floor((player.posY + player.height)/this.tileSize-1) * this.col + Math.floor(player.posX/this.tileSize)
-        this.collide(this.collision_map[tilePosLeftBottom],player,  Math.floor(player.posX/this.tileSize) *this.tileSize, Math.floor((player.posY + player.height)/this.tileSize) *this.tileSize)
-        //case 3 player.posY right corner
-
-      
-        //case 4 bottom (player.posX+ player.width) corner
-        
-        const tilePosRightBottom = Math.floor((player.posY + player.height)/this.tileSize-1) * (this.col) + Math.floor((player.posX+ player.width)/this.tileSize)
-        this.collide(this.collision_map[tilePosRightBottom],player,  Math.floor((player.posX+ player.width)/this.tileSize) *this.tileSize, Math.floor((player.posY + player.height)/this.tileSize) *this.tileSize)
-      
-        
-        
+    //bottomright
+    const bottomRightCorner = Math.floor((player.posY + player.height)/this.tileSize) * this.col + Math.floor((player.posX+player.width)/this.tileSize);
+    this.collide(this.collision_map[bottomRightCorner], player, Math.floor((player.posX+player.width)/this.tileSize) * this.tileSize, Math.floor((player.posY + player.height)/this.tileSize) * this.tileSize, this.tileSize);
         
     }
     collide(value,object,tile_x,tile_y){
-       
-        let tile_size = this.tileSize;
-       
         switch(value) { 
-    
-           
             case  1: this.collideTop(object, tile_y); 
                         break;
-            case  2: this.collideRight(object, tile_x + tile_size);
+            case  2: this.collideRight(object, tile_x + this.tileSize);
                         break;
             case  3: if (this.collideTop(object, tile_y)) 
                         return;
-                     this.collideRight(object, tile_x + tile_size); 
+                     this.collideRight(object, tile_x + this.tileSize); 
                         break;
-            case  4: this.collideBot(object, tile_y + tile_size); 
+            case  4: this.collideBot(object, tile_y + this.tileSize); 
                         break;
             case  5: if (this.collideTop(object, tile_y)) 
                         return;
-                     this.collideBot(object, tile_y + tile_size); 
+                     this.collideBot(object, tile_y + this.tileSize); 
                         break;
-            case  6: if (this.collideRight(object, tile_x + tile_size)) 
+            case  6: if (this.collideRight(object, tile_x + this.tileSize)) 
                         return;
-                     this.collideBot(object, tile_y + tile_size);
-                    break;
+                     this.collideBot(object, tile_y + this.tileSize);
+                        break;
             case  7: if (this.collideTop(object, tile_y)) 
                         return;
-                    if (this.collideRight(object, tile_x + tile_size))
+                    if (this.collideRight(object, tile_x + this.tileSize))
                         return;
-                     this.collideBot(object, tile_y + tile_size);
+                    this.collideBot(object, tile_y + this.tileSize);
                         break;
             case  8: this.collideLeft(object, tile_x); 
                         break;
@@ -113,37 +97,39 @@ export default class Game {
                         break;
             case 10: if (this.collideLeft (object, tile_x)) 
                         return;
-                    this.collideRight(object, tile_x + tile_size);
+                    this.collideRight(object, tile_x + this.tileSize);
                         break;
             case 11: if (this.collideTop(object, tile_y)) 
                         return;
                      if (this.collideLeft(object, tile_x)) 
                         return;
-                     this.collideRight(object, tile_x + tile_size);
+                     this.collideRight(object, tile_x + this.tileSize);
                         break;
             case 12: if (this.collideLeft(object, tile_x))
                         return;
-                     this.collideBot(object, tile_y + tile_size);
+                     this.collideBot(object, tile_y + this.tileSize);
                         break;
             case 13: if (this.collideTop(object, tile_y)) 
                         return;
                      if (this.collideLeft(object, tile_x)) 
                         return;
-                     this.collideBot(object, tile_y + tile_size); 
+                     this.collideBot(object, tile_y + this.tileSize); 
                         break;
-            case 14: if (this.collideLeft (object, tile_x)) 
+            case 14: if (this.collideLeft (object, tile_x)){
                         return;
-                     if (this.collideRight(object, tile_x)) 
+                        }
+                     if (this.collideRight(object, tile_x)) {
                         return;
-                     this.collideBot(object, tile_y + tile_size); 
+                     }
+                     this.collideBot(object, tile_y + this.tileSize); 
                         break;
             case 15: if (this.collideTop(object, tile_y))
                         return;
                      if (this.collideLeft (object, tile_x)) 
                         return;
-                     if (this.collideRight(object, tile_x + tile_size)) 
+                     if (this.collideRight(object, tile_x + this.tileSize)) 
                         return;
-                     this.collideBot(object, tile_y + tile_size); 
+                     this.collideBot(object, tile_y + this.tileSize); 
                         break;
           }
         
@@ -153,56 +139,46 @@ export default class Game {
     }
     
     
-    
     collideBot(object,tile_bottom){
-        // console.log('bottom')
-        if (object.posY < tile_bottom && object.lastFrameX >= tile_bottom) {
-            // console.log('collidebot')
-            object.posY = tile_bottom// Move the top of the object to the bottom of the tile.
-            object.velY = 0;     // Stop moving in that direction.
-            return true;               // Return true because there was a collision.
-      
+        if (object.posY < tile_bottom && object.lastFrameY >= tile_bottom) {
+            object.posY = tile_bottom
+            object.velY = 0;     
+            return true;               
           } return false;  
     
     }
+    collideLeft(object,tile_left){
+            if (object.posX+object.width > tile_left && (object.lastFrameX+object.width) <= tile_left) {
+                console.log('left')
+                object.posX=tile_left - object.width-.01;
+                object.velX = 0;
+                return true;
+        
+    }return false;
+}
+
     collideRight(object,tile_right){
-        // console.log('right')
-        if (object.posX < tile_right && (object.lastFrameY+object.width) >= tile_right) {
-    
+        if (object.posX < tile_right && (object.lastFrameX) >= tile_right) {
             object.posX = tile_right
             object.velX = 0;
             return true;
-      
-          } return false;
+    
+        } return false;
     }
-    collideLeft(object,tile_left){
-        // console.log('left')
-        if (object.posX+object.width > tile_left && (object.lastFrameX+object.width) <= tile_left) {
-            // console.log(object.width)
-            object.posX=tile_left - object.width;
-            object.velX = 0;
-            return true;
-      
-          } return false;
-    }
+
+
     collideTop(object, tile_top){
-        // console.log(tile_top)
-        // console.log(object.posY+object.height)
-        // console.log(object.posY+object.height> tile_top && object.lastFrameY + object.height <= tile_top)
-        if (object.posY+object.height> tile_top && object.lastFrameY + object.height <= tile_top) {
-            object.posY = tile_top - object.height -.01;
-            object.velY = 0;
-            object.jumping = false;
-            
-            return true;
-      
-          } return false;
-    }
+    if (object.posY+object.height> tile_top && object.lastFrameY + object.height <= tile_top) {
+        object.posY = tile_top - object.height -.01;
+        object.velY = 0;
+        object.jumping = false;
+        
+        return true;
+  
+      } return false;
+}
     
-
     
-
-
     physics() {
         this.player.velY += this.gravity;  //controls the levels physics
         this.player.updatePlayer();
@@ -220,4 +196,5 @@ export default class Game {
     }
   
 }
+
 
