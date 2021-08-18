@@ -20,7 +20,6 @@ export default class Input {
         if (eventCode === 'Space') {
             this.jump.getInput(pressed); //change the state of the being pressed
         }else if (eventCode === 'ArrowRight' ){
-            // debugger
             this.right.getInput(pressed);
         }else if (eventCode === 'ArrowLeft' ){
             this.left.getInput(pressed);

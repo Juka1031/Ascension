@@ -3,8 +3,8 @@ export default class Board {
         
         this.board  = document.createElement("canvas").getContext("2d"); //create the game board that can be dynamically resized regardless the canvas dimension
         this.context = canvas.getContext("2d");
-        // console.log(this.context)
         var ctx = canvas.getContext("2d");
+        // canvas.setAttribute('style', "position: relative;  left: 50%;margin-left:-400px; top: 50%;margin-top:-300px; border:2px solid blue")
         canvas.height = gameHeight; //
         canvas.width = gameWidth; //
         ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -14,6 +14,7 @@ export default class Board {
     };
 
     fill (color){
+        
         this.board.fillStyle = color;
         this.board.fillRect(0, 0, this.board.canvas.width, this.board.canvas.height);
           
@@ -28,7 +29,7 @@ export default class Board {
 
         
         this.board.drawImage(player.playerSprite, player.frameSet[player.direction][player.spriteFrame][0], player.frameSet[player.direction][player.spriteFrame][1], 16, 16, player.posX, player.posY, player.width, player.height)
-    }
+    }                                               //player.framset is a hash player.framset[direction]
 
     drawLevel(){
 

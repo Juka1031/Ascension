@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="shortcut icon" type="image/jpg" href="src/images/favi.JPG">
     <script src="./dist/main.js"></script>
     <!-- <script src="src/board.js"></script>
     <script src="src/index.js"></script> -->
@@ -15,14 +16,37 @@
 
 </head>
 
-<body style="background-image: url(src/images/wp8077407.jpg)">
+<body>
     
     <div  id = "title">
         <h1>Game Title</h1>
     </div>
+
+    <div class ="instructions">
+        <h2 class ="gradient-text">Instructions</h2>
+        <div class = "instructions-modal">
+            <p>Progress through each map reaching the goal to progress
+            to the next zone. </p>
+            <p>Use Left and Right arrows to move and
+            Spacebar to Jump. You can jump mid air if you walk off a
+            edge once.</p>
+        </div>
+    </div>
+
+    <div id="pause" class="hidden">GAME PAUSED
+        <p>Press P to Unpause</p>
+        <p>Press M to Mute</p>
+    </div>
+
+    
     <div id = "container" class = "container">
         <canvas id='game'></canvas>
-        <canvas id = 'weather'></canvas>
+        <canvas id ='weather'></canvas>
+    </div>
+   <br>
+    <div class = "end">
+        <a href="https://github.com/Juka1031"><img src="src/images/github.png" alt="Github" width = "70" height="70"/></a>
+        <a href=""><img src="src/images/source.png" width = "70" height="70"/></a>
     </div>
 </body>
 
