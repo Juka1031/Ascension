@@ -1,0 +1,136 @@
+
+
+@font-face {
+    font-family: "rubber";
+    src: url("assets/rubber-biscuit/MMRock9.woff") format('woff');
+}
+
+
+body{
+    background-image: url("./images/wp8077407.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-size: auto;
+}
+
+h1,h2{
+    font-family: "rubber";
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    color:midnightblue;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 rgb(194, 187, 187), -1px 1px 0 rgb(170, 180, 19), 3px 6px 0 rgb(87, 86, 86);
+
+}
+
+#pause {
+    font-family: "rubber";
+    // display: none;
+    text-align: center;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    left: 0;
+    right: 0;
+    width: 500px;
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url("./images/Wood_Block.webp") 30 round;
+    background-image: url("./images/pixelnight.jpg");
+    padding: 2em;
+    text-align: left;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+h1{
+    font-size:50px;
+    font-family: "rubber";
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    color:midnightblue;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 rgb(194, 187, 187), -1px 1px 0 rgb(170, 180, 19), 3px 6px 0 rgb(87, 86, 86);
+
+}
+p{
+    text-shadow: -1px -1px 0 #000;
+}
+
+.instructions{
+    border:black s;
+}
+
+.instructions-modal{
+    font-family: "rubber";
+    display: none;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    left: 0;
+    right: 0;
+    width: 500px;
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url("./images/Wood_Block.webp") 30 round;
+    background-image: url("./images/pixelnight.jpg");
+    padding: 2em;
+    text-align: left;
+
+    // line-height: 1.5;
+    color: rgb(255, 255, 255);
+}
+
+.instructions:hover .instructions-modal {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  
+    display: grid;
+    place-items: center;
+    
+}
+  
+.end{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#weather {
+    position: absolute;
+    background-color: transparent;
+}
