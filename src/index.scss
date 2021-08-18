@@ -1,0 +1,36 @@
+
+
+
+@font-face {
+    font-family: "rubber";
+    // src: url("/assets/rubber-biscuit/RUBBBB__.TTF") format("truetype");
+    src: url("assets/rubber-biscuit/MMRock9.woff") format('woff');
+}
+
+h1{
+    font-family: "rubber";
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    color:midnightblue;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 rgb(194, 187, 187), -1px 1px 0 rgb(170, 180, 19), 3px 6px 0 rgb(87, 86, 86);
+
+}
+
+
+.container {
+    margin:auto;
+    width: 50%;
+    position: relative;
+  }
+  
+  .container > canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+#weather {
+    background-color: transparent;
+}

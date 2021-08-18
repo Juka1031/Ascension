@@ -4,23 +4,20 @@ import Level  from "./level.js";
 
 
 export default class Game {
-    constructor(){
+    constructor(level=0){
         this.friction = .9;
         this.gravity = 2;
         this.player = new Player();
-        this.levelOne = new Level(1)
-        
+        this.level ||= 0
+        this.level +=level
+        this.levelOne = new Level(this.level)
         this.col = this.levelOne.gameCol;
         this.row = this.levelOne.gameRow;
-        // console.log(this.col)
-        // console.log(this.row)
         this.tileSize = 16;
+        this.triggerDoor = false;
         this.height = this.tileSize * this.row;     //controls the game size, the larger it is the larger the field
         this.width = this.tileSize * this.col;
-        
-        // this.levelOne = new Level("1")
         this.map = this.levelOne.map
-
         this.collision_map = this.levelOne.collisionMap
     }
     
@@ -48,22 +45,26 @@ export default class Game {
 
     //topleft
     const topLeftCorner  = Math.floor(player.posY/this.tileSize) * this.col + Math.floor(player.posX/this.tileSize);
-    this.collide(this.collision_map[topLeftCorner], player, Math.floor(player.posX/this.tileSize) * this.tileSize, Math.floor(player.posY/this.tileSize) * this.tileSize, this.tileSize);
+    this.collide(this.collision_map[topLeftCorner], player, Math.floor(player.posX/this.tileSize) * this.tileSize, Math.floor(player.posY/this.tileSize) * this.tileSize);
 
     //topright
     const topRightCorner  = Math.floor(player.posY/this.tileSize) * this.col + Math.floor((player.posX+player.width)/this.tileSize);
-    this.collide(this.collision_map[topRightCorner], player, Math.floor((player.posX+player.width)/this.tileSize) * this.tileSize, Math.floor(player.posY/this.tileSize) * this.tileSize, this.tileSize);
+    this.collide(this.collision_map[topRightCorner], player, Math.floor((player.posX+player.width)/this.tileSize) * this.tileSize, Math.floor(player.posY/this.tileSize) * this.tileSize);
     
     //bottomleft
     const bottomLeftCorner = Math.floor((player.posY + player.height)/this.tileSize) * this.col + Math.floor(player.posX/this.tileSize);
-    this.collide(this.collision_map[bottomLeftCorner], player, Math.floor(player.posX/this.tileSize) * this.tileSize, Math.floor((player.posY + player.height)/this.tileSize) * this.tileSize, this.tileSize);
+    this.collide(this.collision_map[bottomLeftCorner], player, Math.floor(player.posX/this.tileSize) * this.tileSize, Math.floor((player.posY + player.height)/this.tileSize) * this.tileSize);
 
     //bottomright
     const bottomRightCorner = Math.floor((player.posY + player.height)/this.tileSize) * this.col + Math.floor((player.posX+player.width)/this.tileSize);
-    this.collide(this.collision_map[bottomRightCorner], player, Math.floor((player.posX+player.width)/this.tileSize) * this.tileSize, Math.floor((player.posY + player.height)/this.tileSize) * this.tileSize, this.tileSize);
+    this.collide(this.collision_map[bottomRightCorner], player, Math.floor((player.posX+player.width)/this.tileSize) * this.tileSize, Math.floor((player.posY + player.height)/this.tileSize) * this.tileSize);
         
+
+    const center =  Math.floor((player.posY + (player.height/2))/this.tileSize) * this.col + Math.floor((player.posX+(player.width/2))/this.tileSize);
+    this.collide(this.collision_map[center], player, Math.floor((player.posX+player.width)/this.tileSize) * this.tileSize, Math.floor((player.posY + player.height)/this.tileSize) * this.tileSize,true);
     }
-    collide(value,object,tile_x,tile_y){
+    collide(value,object,tile_x,tile_y,center){
+        
         switch(value) { 
             case  1: this.collideTop(object, tile_y); 
                         break;
@@ -131,6 +132,17 @@ export default class Game {
                         return;
                      this.collideBot(object, tile_y + this.tileSize); 
                         break;
+            case 20: {
+                    
+                    if(center){
+                    this.level += 1
+                    this.levelOne = new Level(this.level)
+                    this.triggerDoor = true;
+                    this.player.posX -=10;
+                    break;
+                    }
+            }
+            
           }
         
       
@@ -149,7 +161,7 @@ export default class Game {
     }
     collideLeft(object,tile_left){
             if (object.posX+object.width > tile_left && (object.lastFrameX+object.width) <= tile_left) {
-                console.log('left')
+                
                 object.posX=tile_left - object.width-.01;
                 object.velX = 0;
                 return true;

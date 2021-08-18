@@ -1,16 +1,16 @@
 export default class Board {
-    constructor(canvas,gameHeight, gameWidth) {
+    constructor(canvas,gameHeight, gameWidth, position) {
         
         this.board  = document.createElement("canvas").getContext("2d"); //create the game board that can be dynamically resized regardless the canvas dimension
         this.context = canvas.getContext("2d");
-        // context.fillStyle = "blue";
-        // ctx.fillRect(0, 0, canvas.width, canvas.height);
-       
+        // console.log(this.context)
         var ctx = canvas.getContext("2d");
         canvas.height = gameHeight; //
         canvas.width = gameWidth; //
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-
+        if(position){
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+        }
     };
 
     fill (color){
@@ -19,11 +19,15 @@ export default class Board {
           
       };
 
-    drawPlayer(x,y,width,height,color){
+    drawPlayer(player){
 
-      this.board.fillStyle = color;
-      this.board.fillRect(x, y, width, height);
-    //   debugger
+    //   this.board.fillStyle = color;
+    //   this.board.fillRect(x, y, width, height);
+
+      
+
+        
+        this.board.drawImage(player.playerSprite, player.frameSet[player.direction][player.spriteFrame][0], player.frameSet[player.direction][player.spriteFrame][1], 16, 16, player.posX, player.posY, player.width, player.height)
     }
 
     drawLevel(){
@@ -31,17 +35,16 @@ export default class Board {
     }
 
     drawMap(game, columns) {
-        // console.log(game.map)
+        // console.log('hi')
         for (let index = game.map.length - 1; index > -1; -- index) {
             // console.log(this)
         let value = game.map[index];
-        let source_x =(value % game.levelOne.col) * game.levelOne.block;
-        let source_y = Math.floor(value / game.levelOne.col) * game.levelOne.block;
-        let destination_x = (index % columns) * game.levelOne.block;
-        let destination_y = Math.floor(index / columns) * game.levelOne.block;
-            // console.log(game.levelOne.tilesheet)
-        // game.levelOne.tilesheet.onload = function(){
-            this.board.drawImage(game.levelOne.tilesheet, source_x, source_y, game.levelOne.block, game.levelOne.block, destination_x, destination_y, game.levelOne.block, game.levelOne.block);
+        let gameX =(value % game.levelOne.col) * game.levelOne.block;
+        let gameY = Math.floor(value / game.levelOne.col) * game.levelOne.block;
+        let endX = (index % columns) * game.levelOne.block;
+        let endY = Math.floor(index / columns) * game.levelOne.block;
+
+            this.board.drawImage(game.levelOne.tilesheet, gameX, gameY, game.levelOne.block, game.levelOne.block, endX, endY, game.levelOne.block, game.levelOne.block);
         // }
         
         }
