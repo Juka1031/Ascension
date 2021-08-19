@@ -15,7 +15,7 @@ export default class Board {
 
     fill (color){
         
-        this.board.fillStyle = color;
+        // this.board.fillStyle = color;
         this.board.fillRect(0, 0, this.board.canvas.width, this.board.canvas.height);
           
       };
