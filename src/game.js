@@ -11,14 +11,18 @@ export default class Game {
         this.level ||= 0
         this.level +=level
         this.levelOne = new Level(this.level)
+        this.player.posX = this.levelOne.playerSpawnX
+        this.player.posY = this.levelOne.playerSpawnY
         this.col = this.levelOne.gameCol;
         this.row = this.levelOne.gameRow;
         this.tileSize = 16;
         this.triggerDoor = false;
         this.height = this.tileSize * this.row;     //controls the game size, the larger it is the larger the field
         this.width = this.tileSize * this.col;
-        this.map = this.levelOne.map
-        this.collision_map = this.levelOne.collisionMap
+        this.map = this.levelOne.map;
+        this.collision_map = this.levelOne.collisionMap;
+        this.restart = false;
+        this.gameWin= false;
     }
     
     borderCollision(player){ 
@@ -132,16 +136,28 @@ export default class Game {
                         return;
                      this.collideBot(object, tile_y + this.tileSize); 
                         break;
-            case 20: {
+            case 20:{ //next map
                     
                     if(center){
-                    this.level += 1
-                    this.levelOne = new Level(this.level)
-                    this.triggerDoor = true;
-                    this.player.posX -=10;
-                    break;
+                        this.level += 1
+                        this.levelOne = new Level(this.level)
+                        this.triggerDoor = true;
+                        this.player.posX -=10;
+                        break;
+                    }
+                    }
+            case 21:{//death
+                    if(center){
+                       this.restart = true;
+                    
+                    }
+                    }
+            case 22:{
+                    if(center){
+                        this.gameWin = true;
                     }
             }
+            
             
           }
         
@@ -206,6 +222,10 @@ export default class Game {
         this.physics();
 
     }
+
+    // restart(level){
+    //     game
+    // }
   
 }
 

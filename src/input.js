@@ -17,11 +17,11 @@ export default class Input {
         } else{ //keyup
             pressed = false;
         }
-        if (eventCode === 'Space') {
+        if (eventCode === 'KeyW') {
             this.jump.getInput(pressed); //change the state of the being pressed
-        }else if (eventCode === 'ArrowRight' ){
+        }else if (eventCode === 'KeyD' ){
             this.right.getInput(pressed);
-        }else if (eventCode === 'ArrowLeft' ){
+        }else if (eventCode === 'KeyA' ){
             this.left.getInput(pressed);
         };
     };

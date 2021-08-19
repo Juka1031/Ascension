@@ -26,6 +26,21 @@ document.addEventListener('DOMContentLoaded',() => {
     }
     
     var update = function() {
+        if (game.restart === true){
+            game = new Game(game.level)
+            board = new Board(document.querySelector("#game"),game.height*3,game.width*3);
+            board.board.canvas.height = game.height;
+            board.board.canvas.width = game.width;
+        }
+
+        if (game.gameWin){
+            game = new Game(game.level)
+            board = new Board(document.querySelector("#game"),game.height*3,game.width*3);
+            board.board.canvas.height = game.height;
+            board.board.canvas.width = game.width;
+        }
+
+
         if (!engine.paused){
             if (controller.left.pressed)  {
                 game.player.moveLeft();  
@@ -55,7 +70,7 @@ document.addEventListener('DOMContentLoaded',() => {
         
     }
 
-let game = new Game();
+let game = new Game(5);
 let board = new Board(document.querySelector("#game"),game.height*3,game.width*3);
 // let background = new Board(document.querySelector("#weather"),game.height*3,game.width*3,true)
 let controller = new Input();

@@ -116,6 +116,7 @@ p {
 
 .instructions {
   border: black s;
+  font-size: 30px;
 }
 
 .instructions-modal {

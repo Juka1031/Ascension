@@ -10,7 +10,7 @@ export default class Engine {
         this.paused = false;
         this.muted = false;
         this.bg = new Audio("src/sounds/bg.mp3")
-        this.bg.volume = .5;
+        this.bg.volume = .4;
         this.characPausedXY = [0,0]
 
 }
@@ -42,11 +42,13 @@ export default class Engine {
     }
     mute(){
         this.muted = true;
+        this.bg.volume = 0;
         
     }
 
     unmute(){
         this.muted = false;
+        this.bg.volume = .4;
       
     }
 
