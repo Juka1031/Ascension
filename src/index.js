@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded',() => {
         
     }
 
-let game = new Game(5);
+let game = new Game(0);
 let board = new Board(document.querySelector("#game"),game.height*3,game.width*3);
 // let background = new Board(document.querySelector("#weather"),game.height*3,game.width*3,true)
 let controller = new Input();
