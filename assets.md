@@ -1,0 +1,11 @@
+//https://wallpapercave.com/winter-pixel-art-wallpapers Wallpapers
+https://caveras.net/ 
+https://adamatomic.itch.io/abandonauts
+https://declivever.itch.io/simple-platformer-tilesets
+https://wallpaperaccess.com/pixel-sky
+https://www.kissclipart.com/computer-icons-github-scalable-vector-graphics-git-4y2qjl/
+https://pixabay.com/vectors/display-source-icon-sign-symbol-27766/ source
+https://xvaiersyear10blog.blogspot.com/2019/03/favicon.html
+https://www.shutterstock.com/image-vector/pixel-art-night-starry-sky-seamless-1355834585
+https://freesound.org/people/cabled_mess/sounds/350905/
+https://www.fesliyanstudios.com/royalty-free-music/downloads-c/8-bit-music/6 By David Renda
