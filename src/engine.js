@@ -10,8 +10,9 @@ export default class Engine {
         this.paused = false;
         this.muted = false;
         this.bg = new Audio("src/sounds/bg.mp3")
-        this.bg.volume = .4;
+        this.bg.volume = .25;
         this.characPausedXY = [0,0]
+        this.end = false;
 
 }
     run(loop){ // one loop
@@ -26,18 +27,23 @@ export default class Engine {
 
         requestAnimationFrame(this.handleRun); //loop back to run
     }
-    pause(){
+    pause(end){
         this.paused = true;
-
+        if (end === undefined) end = false;
+        this.end = end;
+        if (end !== true){
         const pauseId = document.getElementById('pause');
         pauseId.removeAttribute('class')
+        }
 
     }
     unpause(){
-        this.paused = false;
-        const pauseId = document.getElementById('pause');
-        pauseId.setAttribute('class', 'hidden')
-        this.start();
+        if (this.end == false){
+            this.paused = false;
+            const pauseId = document.getElementById('pause');
+            pauseId.setAttribute('class', 'hidden')
+            this.start();
+        }
         
     }
     mute(){
@@ -48,7 +54,7 @@ export default class Engine {
 
     unmute(){
         this.muted = false;
-        this.bg.volume = .4;
+        this.bg.volume = .25;
       
     }
 

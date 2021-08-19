@@ -34,10 +34,11 @@ document.addEventListener('DOMContentLoaded',() => {
         }
 
         if (game.gameWin){
-            game = new Game(game.level)
-            board = new Board(document.querySelector("#game"),game.height*3,game.width*3);
-            board.board.canvas.height = game.height;
-            board.board.canvas.width = game.width;
+            let end = true;
+            engine.pause(end);
+            engine.stop()
+            const winId = document.getElementById('win');
+            winId.removeAttribute('class')
         }
 
 
