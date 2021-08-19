@@ -7,8 +7,15 @@ import Engine from "./engine.js"
 document.addEventListener('DOMContentLoaded',() => {
     var keyPressed = function(event){ //changed const to var since needed in other files and not defined scoped
         engine.bg.play();
-        controller.keyPressed(event.type, event.code)
-        
+        let start = controller.keyPressed(event.type, event.code)
+
+        if(start === true){
+            // debugger
+            engine.start();
+            const startId = document.getElementById('start');
+            startId.setAttribute('class', 'hidden')
+            
+        }
         
     }
 

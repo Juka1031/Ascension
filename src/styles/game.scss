@@ -148,6 +148,34 @@ p{
     
 }
 
+
+#start{
+    font-family: "rubber";
+    text-align: center;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    font-size: 20px;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 450px;
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url("./images/Wood_Block.webp") 30 round;
+    background-image: url("./images/pixelnight.jpg");
+    padding: 2em;
+    text-align: left;
+}
+
+#start p {
+    text-align: center;
+    // font-size: 25x;
+}
+
+
 #win p {
     text-align: center;
     font-size: 30px;

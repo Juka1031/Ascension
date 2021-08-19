@@ -23,7 +23,10 @@ export default class Input {
             this.right.getInput(pressed);
         }else if (eventCode === 'KeyA' ){
             this.left.getInput(pressed);
-        };
+        }else if (eventCode === 'Enter' ){
+            return true;
+        }
+        ;
     };
 
     
