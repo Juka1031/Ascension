@@ -17,7 +17,7 @@ export default class Input {
         } else{ //keyup
             pressed = false;
         }
-        if (eventCode === 'KeyW') {
+        if (eventCode === 'Space') {
             this.jump.getInput(pressed); //change the state of the being pressed
         }else if (eventCode === 'KeyD' ){
             this.right.getInput(pressed);
