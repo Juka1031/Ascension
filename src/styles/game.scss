@@ -175,36 +175,31 @@ p{
     // font-size: 25x;
 }
 
-
 #win p {
     text-align: center;
     font-size: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.intro {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    -webkit-text-stroke: .3px #0afc97
+}
 
 .container {
-  
     display: grid;
     place-items: center;
-    
 }
   
 .end{
+    margin-top: 1rem;
     display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.angel-logo{
+    margin-right: 1rem;
 }
 
 #weather {
