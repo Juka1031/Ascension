@@ -137,33 +137,23 @@ export default class Game {
                      this.collideBot(object, tile_y + this.tileSize); 
                         break;
             case 20:{ //next map
-                    
                     if(center){
                         this.level += 1
                         this.levelOne = new Level(this.level)
                         this.triggerDoor = true;
                         this.player.posX -=10;
                         break;
-                    }
-                    }
+                    }}
             case 21:{//death
                     if(center){
                        this.restart = true;
-                    
-                    }
-                    }
+                    }}
             case 22:{
                     if(center){
                         this.gameWin = true;
                     }
-            }
-            
-            
+            }       
           }
-        
-      
-    
-      
     }
     
     
@@ -200,9 +190,7 @@ export default class Game {
         object.posY = tile_top - object.height -.01;
         object.velY = 0;
         object.jumping = false;
-        
         return true;
-  
       } return false;
 }
     
@@ -214,13 +202,11 @@ export default class Game {
         this.player.velY *= this.friction;
         this.borderCollision(this.player);
         this.collideTile(this.player);
-        
     }
 
 
     update(){//updates the physics every frame
         this.physics();
-
     }
 
     // restart(level){
