@@ -3,6 +3,8 @@
 
 This project will be a 2d platformer in which the user will attempt to make it from point A to point B of the board/level. The player will control a character that can move left or right via left arrow key and right arrow key respectively, and the player will have the ability to jump vertically via spacebar. Ideally the later levels will have further interactions depending on the level via an action key mapped to the key F (This is not set in stone yet). There will be various obstacles and/or puzzles that will impede the player from reaching the goal (point B), such as but not limited to, pitfalls, buttons, moveable blocks, and much more.
 
+![Ascension — Mozilla Firefox 2021-10-13 12-01-35 (online-video-cutter com)](https://user-images.githubusercontent.com/85578514/137171858-6bd930d2-f192-4faf-8f1c-13ae3ab28285.gif)
+
 <h1>MVPS</h1>
 
 board.js, which handles what is depicted, 
@@ -43,6 +45,24 @@ Canvas
 Canvas API to render the game board
 Wepback to bundle and transpile the JS codes
 Potentially animation libraries if the time allows for it
+
+
+<h1>Code</h1>
+
+```...javascript
+      physics() {
+        this.player.velY += this.gravity; 
+        this.player.velX *= this.friction;
+        this.player.velY *= this.friction;
+        this.borderCollision(this.player);
+        this.collideTile(this.player);
+        this.player.updatePlayer();
+    }
+```
+
+Physics can be dynamically changed based upon the level data. This allows for scalability of additional levels with differing level layout. 
+
+
 
 <h1>Timeline</h1>
 
